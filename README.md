@@ -1,5 +1,5 @@
 # PIB-Configuration-Tool
-A Configuration Tool for [Pigs in a Blanket](https://github.com/SonicMastr/Pigs-In-A-Blanket)
+Installer and Configuration Tool for [Pigs in a Blanket](https://github.com/SonicMastr/Pigs-In-A-Blanket) on the PSVita
 
 #### Note
 The custom resolution mode configuration works as so:
