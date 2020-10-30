@@ -14,7 +14,7 @@ This application also provides users to force games to run any resolution if the
 
 |Mode|Forced Resolution Mode|Sharpscale Required|
 |:-:|:-:|:-:|
-|0|OFF|Up to Developer|
+|0|Disabled (Default)|Up to Developer|
 |1|960X544|no|
 |2|720X408|no|
 |3|640X368|no|
