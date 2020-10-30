@@ -13,3 +13,6 @@ The custom resolution mode configuration works as so:
 |4|480X272|no|
 |5|1280X720|Vita|
 |6|1920X1080|Vita|
+
+#### TODO
+LiveArea Assets
