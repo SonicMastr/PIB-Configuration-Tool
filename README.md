@@ -2,7 +2,7 @@
 Installer and Configuration Tool for [Pigs in a Blanket](https://github.com/SonicMastr/Pigs-In-A-Blanket) on the PSVita
 
 ## What this does
-This application is for both user and devs to enjoy the benifits of Pigs in a Blanket without having to go through a mariad of steps to get things working. Simply install and press Cross. It's as simple as that. If at any time you accidentaly delete or corrupt your modules, re-install is as simple as a click of a button. 
+This application is for both user and devs to enjoy the benifits of Pigs in a Blanket without having to go through a mariad of steps to get things working. Just install the VPK, open the app, and press Cross. It's as simple as that, and takes less than a second to complete. If at any time you accidentaly delete or corrupt your modules, re-install is as simple as the press of a button. 
 
 ![Pigs in a Blanket Configuration Tool](https://cdn.discordapp.com/attachments/692425410142666764/771564600810274816/unknown.png)
 
