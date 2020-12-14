@@ -278,6 +278,7 @@ void creditMenu()
 void install()
 {
     psvDebugScreenClear(0);
+    createDirectory("ur0:data");
     createDirectory("ur0:data/external");
     int shaccStat = saveFile(&_binary_resources_libshacccg_suprx_start, &_binary_resources_libshacccg_suprx_size, "ur0:data/external/libshacccg.suprx", "libshacccg.suprx");
     int pigStat = saveFile(&_binary_resources_libScePiglet_suprx_start, &_binary_resources_libScePiglet_suprx_size, "ur0:data/external/libScePiglet.suprx", "libScePiglet.suprx");
