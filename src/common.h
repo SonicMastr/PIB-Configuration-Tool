@@ -23,7 +23,7 @@ typedef enum vitaEGLNativeWindowType {
     VITA_WINDOW_1920X1080
 } VitaEGLNativeWindowType;
 
-#define VERSION 1.00f
+#define VERSION 1.10f
 #define printf psvDebugScreenPrintf
 #define SUCCESS(a, args...) { psvDebugScreenSetFgColor(0x00FF00); printf(a, ## args); }
 #define ERROR(a, args...) { psvDebugScreenSetFgColor(0xFF0000); printf(a, ## args); }
