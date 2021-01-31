@@ -275,24 +275,60 @@ void creditMenu()
     }
 }
 
-void install()
+void install(bool VitaGL)
 {
     psvDebugScreenClear(0);
     createDirectory("ur0:data");
-    createDirectory("ur0:data/external");
-    int shaccStat = saveFile(&_binary_resources_libshacccg_suprx_start, &_binary_resources_libshacccg_suprx_size, "ur0:data/external/libshacccg.suprx", "libshacccg.suprx");
-    int pigStat = saveFile(&_binary_resources_libScePiglet_suprx_start, &_binary_resources_libScePiglet_suprx_size, "ur0:data/external/libScePiglet.suprx", "libScePiglet.suprx");
-    if (pigStat)
-    {
-        ERROR("Failed to Install Pib. Please Try Again.\n");
-    } else if (shaccStat) {
-        WARN("Partially Installed PIB\n\n");
-    } else {
-        SUCCESS("Installed PIB!\n\n");
+    if (!VitaGL){
+        createDirectory("ur0:data/external");
+        int shaccStat = saveFile(&_binary_resources_libshacccg_suprx_start, &_binary_resources_libshacccg_suprx_size, "ur0:data/external/libshacccg.suprx", "libshacccg.suprx");
+        int pigStat = saveFile(&_binary_resources_libScePiglet_suprx_start, &_binary_resources_libScePiglet_suprx_size, "ur0:data/external/libScePiglet.suprx", "libScePiglet.suprx");
+        if (pigStat)
+        {
+            ERROR("Failed to Install Pib. Please Try Again.\n");
+        } else if (shaccStat) {
+         WARN("Partially Installed PIB\n\n");
+        } else {
+            SUCCESS("Installed PIB!\n\n");
+        }
+    }
+    else {
+        saveFile(&_binary_resources_libshacccg_suprx_start, &_binary_resources_libshacccg_suprx_size, "ur0:data/libshacccg.suprx", "libshacccg.suprx");
     }
     LOG("Press Any Button to Go Back\n");
     get_key(1);
     get_key(0);
+}
+
+void vitaGLStatus()
+{
+    psvDebugScreenClear(0);
+    int hasShacc = fileExists("libshacccg.suprx", "ur0:data");
+    LOG("Pigs In A Blanket Configuration Tool %.2f\nBy SonicMastr and CBPS\n\n", VERSION);
+    LOG("VitaGL libshacccg  - ");
+    if (hasShacc)
+    {
+        SUCCESS("Installed\n");
+        LOG("\nCROSS: Re-install/Repair ShaccCg for VitaGL\n");
+    } else {
+        ERROR("Not Installed\n");
+        LOG("\nCROSS: Install ShaccCg for VitaGL\n");
+    }
+    LOG("CIRCLE: Main Menu\n");
+    get_key(1);
+    while (1) {
+        switch(get_key(0)) {
+            case SCE_CTRL_CROSS:
+                install(true);
+                return;
+                break;
+            case SCE_CTRL_CIRCLE:
+                return;
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 void mainMenu()
@@ -345,12 +381,13 @@ void mainMenu()
     LOG("SQUARE: Set Forced Resolution Mode\n");
     LOG("TRIANGLE: Credits\n");
     LOG("CIRCLE: Exit Application\n");
+    LOG("\n\nSELECT: Install ShaccCg for VitaGL\n")
 
     get_key(1); 
     while(1){
         switch(get_key(0)) {
 		case SCE_CTRL_CROSS:
-			install();
+			install(false);
             return;
 			break;
         case SCE_CTRL_SQUARE:
@@ -365,6 +402,10 @@ void mainMenu()
             gxm_term();
 			sceKernelExitProcess(0);
 			break;
+        case SCE_CTRL_SELECT:
+            vitaGLStatus();
+            return;
+            break;
 		default:
 			break;
 	    }

@@ -15,7 +15,7 @@ include("${DOLCESDK}/share/dolce.cmake" REQUIRED)
 set(DOLCE_APP_NAME "PIB Configuration Tool")
 set(DOLCE_TITLEID  "PIGS00001")
 
-set(DOLCE_VERSION  "01.00")
+set(DOLCE_VERSION  "01.10")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
