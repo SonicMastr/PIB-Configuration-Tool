@@ -4,11 +4,11 @@ Installer and Configuration Tool for [Pigs in a Blanket](https://github.com/Soni
 ## What this does
 This application is for both user and devs to enjoy the benifits of Pigs in a Blanket without having to go through a mariad of steps to get things working. Just install the VPK, open the app, and press Cross. It's as simple as that, and takes less than a second to complete. If at any time you accidentaly delete or corrupt your modules, re-install is as simple as the press of a button. 
 
-![Pigs in a Blanket Configuration Tool](https://cdn.discordapp.com/attachments/550095827981303810/805249968537206814/0xq3hOupwY7803434193020218644888053.png)
+![Pigs in a Blanket Configuration Tool](https://i.imageupload.app/242053f9fadef541425f.png)
 
 This application also provides users to force games to run any resolution if they want to. So you can go for lower resolutions if you feel like you need a graphics boost, or higher resolutions NATIVELY on a Playstation TV, or on a PSVita using Sharpscale. When setting your mode, you only only given the options from 0 to 6, going over will reset your resolutions to the default. The app will tell you what resolution is set as confirmation, but you can also refer to the Custom Resolution Mode Guide below.
 
-![Custom Resolution](https://cdn.discordapp.com/attachments/692425410142666764/771564846219132958/unknown.png)
+![Custom Resolution](https://i.imageupload.app/0fa4564c2777e0449c80.png)
 
 #### Custom Resolution Mode Guide
 
